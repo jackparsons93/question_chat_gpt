@@ -40,7 +40,7 @@ TWITCH_HOST="irc.twitch.tv"
 TWITCH_PORT=6667	
 
 class TwitchBot
-    api_key = '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'
+    api_key = ''
     client = ChatGPT::Client.new(api_key)
 
  
@@ -48,10 +48,10 @@ class TwitchBot
 	def initialize
 		#@translator=Yandex::Translator.new('trnsl.1.1.20180731T232407Z.2d3b500877260736.d6a4b1322b8071c460e3c3b8eab22c210dcc6c06')
 		@nickname="question_chat_gpt"
-		@password="oauth:hfo5obzc403jdknaau1fl20yvfjguv"
-		@channel="eilsna"
+		@password=""
+		@channel=""
 		@socket=TCPSocket.open(TWITCH_HOST, TWITCH_PORT)
-        @api_key = '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'
+        @api_key = ''
         @client = ChatGPT::Client.new(@api_key)
 		write_to_system(twitch_data)
 		write_to_system  "PASS #{@password}"
